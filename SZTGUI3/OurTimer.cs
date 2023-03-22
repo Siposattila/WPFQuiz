@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Timers;
@@ -29,7 +30,7 @@ namespace SZTGUI3
             if (timePassed >= 60)
             {
                 onTimerEnd?.Invoke();
-                StopTimer();
+                StopTimer(null, null);
             }
         }
 
@@ -40,7 +41,7 @@ namespace SZTGUI3
             timerThread.Start();
         }
 
-        public static void StopTimer()
+        public static void StopTimer(object sender, CancelEventArgs e)
         {
             timerThread.Suspend();
             timerThread = null;
