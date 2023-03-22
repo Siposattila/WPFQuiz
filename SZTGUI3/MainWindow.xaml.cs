@@ -24,5 +24,26 @@ namespace SZTGUI3
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void L_Mouse(object sender, MouseButtonEventArgs e)
+        {
+            Label l = (sender as Label);
+            Quiz q = (Quiz)l.Tag;
+            TotoChecker tc = new TotoChecker(q);
+            if (tc.ShowDialog() == true)
+            {
+                l.Background = Brushes.Green;
+            }
+            else
+            {
+                l.Background = Brushes.LightPink;
+            }
+            l.IsEnabled = false;
+
+        }
     }
 }
