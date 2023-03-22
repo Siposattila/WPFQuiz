@@ -30,7 +30,7 @@ namespace SZTGUI3
             if (timePassed >= 60)
             {
                 onTimerEnd?.Invoke();
-                StopTimer(null, null);
+                StopTimer();
             }
         }
 
@@ -41,7 +41,7 @@ namespace SZTGUI3
             timerThread.Start();
         }
 
-        public static void StopTimer(object sender, CancelEventArgs e)
+        public static void StopTimer()
         {
             if (timerThread != null)
             {
