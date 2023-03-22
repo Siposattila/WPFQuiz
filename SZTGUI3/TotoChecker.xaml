@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SZTGUI3"
         mc:Ignorable="d"
-        Title="TotoChecker" Height="250" Width="400">
+        ResizeMode="NoResize"
+        Title="Question" Height="400" Width="400">
     <Grid>
         <StackPanel Margin="10">
             <Label FontWeight="Bold" x:Name="question" Background="Purple" Padding="10"/>
