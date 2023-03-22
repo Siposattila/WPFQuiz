@@ -19,10 +19,11 @@ namespace SZTGUI3
     /// </summary>
     public partial class TotoChecker : Window
     {
-        Quiz quiz;
+        private readonly Quiz quiz;
         public TotoChecker(Quiz quiz)
         {
             InitializeComponent();
+            this.WindowStyle = WindowStyle.None;
             this.quiz = quiz;
             question.Content = this.quiz.Question;
             answerA.Content = this.quiz.Answers[0];
