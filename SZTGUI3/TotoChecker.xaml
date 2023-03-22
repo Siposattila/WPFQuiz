@@ -1,0 +1,27 @@
+﻿<Window x:Class="SZTGUI3.TotoChecker"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SZTGUI3"
+        mc:Ignorable="d"
+        Title="TotoChecker" Height="250" Width="400">
+    <Grid>
+        <StackPanel Margin="10">
+            <Label FontWeight="Bold" x:Name="question" Background="Purple" Padding="10"/>
+            <RadioButton x:Name="rButtonA" Margin="10">
+                <Label x:Name="answerA"/>
+            </RadioButton>
+            <RadioButton x:Name="rButtonB" Margin="10">
+                <Label x:Name="answerB"/>
+            </RadioButton>
+            <RadioButton x:Name="rButtonC" Margin="10">
+                <Label x:Name="answerC"/>
+            </RadioButton>
+            <RadioButton x:Name="rButtonD" Margin="10">
+                <Label x:Name="answerD"/>
+            </RadioButton>
+            <Button Content="Submit answer" Padding="10" Margin="10" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
