@@ -23,11 +23,25 @@ namespace SZTGUI3
         public MainWindow()
         {
             InitializeComponent();
+            Title = "Legyen ön is milliomos";
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
+            Worker w = new Worker();
+            List<KeyValuePair<string, List<KeyValuePair<string, bool>>>> questions = w.GetQuestions();
+            foreach (var item in questions)
+            {
+                Label l = new Label();
+                l.Tag = new Quiz(item);
+                l.Margin = new Thickness(20);
+                l.Height = this.ActualHeight / 8;
+                l.Width = this.ActualWidth / 8;
+                l.Background = Brushes.LightBlue;
+                l.MouseLeftButtonDown += L_Mouse;
+                linuxMasterRace.Children.Add(l);
+            }
+            
         }
         private void L_Mouse(object sender, MouseButtonEventArgs e)
         {
@@ -44,6 +58,11 @@ namespace SZTGUI3
             }
             l.IsEnabled = false;
 
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            OurTimer.StopTimer();
         }
     }
 }

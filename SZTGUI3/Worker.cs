@@ -48,7 +48,38 @@ namespace SZTGUI3
                 new KeyValuePair<string, List<KeyValuePair<string, bool>>>("Milyen színű a villamos?", new List<KeyValuePair<string, bool>> {
                     new KeyValuePair<string, bool>("Barna", false),
                     new KeyValuePair<string, bool>("Piros", false),
-                    new KeyValuePair<string, bool>("Sárga", true)
+                    new KeyValuePair<string, bool>("Sárga", true),
+                    new KeyValuePair<string, bool>("Hupilila", false)
+                }),
+                new KeyValuePair<string, List<KeyValuePair<string, bool>>>("Melyik a meta OS?", new List<KeyValuePair<string, bool>> {
+                    new KeyValuePair<string, bool>("Windows", false),
+                    new KeyValuePair<string, bool>("Ubuntu", false),
+                    new KeyValuePair<string, bool>("Fedora", true),
+                    new KeyValuePair<string, bool>("MacOS", false)
+                }),
+                new KeyValuePair<string, List<KeyValuePair<string, bool>>>("Hány pontot kapunk erre a feladatra?", new List<KeyValuePair<string, bool>> {
+                    new KeyValuePair<string, bool>("1", false),
+                    new KeyValuePair<string, bool>("az összes", true),
+                    new KeyValuePair<string, bool>("0.5", false),
+                    new KeyValuePair<string, bool>("3", false)
+                }),
+                new KeyValuePair<string, List<KeyValuePair<string, bool>>>("Hány ablaka van a NIK-nek?", new List<KeyValuePair<string, bool>> {
+                    new KeyValuePair<string, bool>("who cares", true),
+                    new KeyValuePair<string, bool>("nemtom", false),
+                    new KeyValuePair<string, bool>("500", false),
+                    new KeyValuePair<string, bool>("1200", false)
+                }),
+                new KeyValuePair<string, List<KeyValuePair<string, bool>>>("Milyen vonat van a BC mellett?", new List<KeyValuePair<string, bool>> {
+                    new KeyValuePair<string, bool>("Kék", true),
+                    new KeyValuePair<string, bool>("Piros", false),
+                    new KeyValuePair<string, bool>("Sárga", false),
+                    new KeyValuePair<string, bool>("Zöld", false)
+                }),
+                new KeyValuePair<string, List<KeyValuePair<string, bool>>>("Mennyi az esélye annak, hogy valaki átmeg valszámból?", new List<KeyValuePair<string, bool>> {
+                    new KeyValuePair<string, bool>("Barna", false),
+                    new KeyValuePair<string, bool>("Piros", false),
+                    new KeyValuePair<string, bool>("Sárga", true),
+                    new KeyValuePair<string, bool>("Hupilila", false)
                 })
             };
         }
