@@ -43,8 +43,11 @@ namespace SZTGUI3
 
         public static void StopTimer(object sender, CancelEventArgs e)
         {
-            timerThread.Suspend();
-            timerThread = null;
+            if (timerThread != null)
+            {
+                timerThread.Suspend();
+                timerThread = null;
+            }
             timer = null;
             timePassed = 0;
         }
