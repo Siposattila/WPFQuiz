@@ -23,6 +23,8 @@ namespace SZTGUI3
         public TotoChecker(Quiz quiz)
         {
             InitializeComponent();
+            OurTimer.StartTimer();
+            OurTimer.onTimerEnd += OutOfTime;
             this.WindowStyle = WindowStyle.None;
             this.quiz = quiz;
             question.Content = this.quiz.Question;
@@ -31,7 +33,29 @@ namespace SZTGUI3
             answerC.Content = this.quiz.Answers[2];
             answerD.Content = this.quiz.Answers[3];
         }
-
+        private void OutOfTime()
+        {
+            OurTimer.StopTimer();
+            switch (quiz.CorrectAnswer)
+            {
+                case 0:
+                    this.DialogResult = rButtonA.IsChecked;
+                    break;
+                case 1:
+                    this.DialogResult = rButtonB.IsChecked;
+                    break;
+                case 2:
+                    this.DialogResult = rButtonC.IsChecked;
+                    break;
+                case 3:
+                    this.DialogResult = rButtonD.IsChecked;
+                    break;
+                default:
+                    this.DialogResult = false;
+                    break;
+            }
+            this.Close();
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             switch (quiz.CorrectAnswer)
